@@ -1,3 +1,4 @@
+
 export interface MethodStage {
   stage: number
   title: string
@@ -5,7 +6,7 @@ export interface MethodStage {
   description: string
   practices: string[]
 }
-
+ 
 export const methodStages: MethodStage[] = [
   {
     stage: 1,
@@ -48,7 +49,7 @@ export const methodStages: MethodStage[] = [
     practices: ['Values-aligned goal setting', 'Sustainable growth planning', 'Ongoing mental fitness practice'],
   },
 ]
-
+ 
 export interface Testimonial {
   name: string
   role: string
@@ -56,7 +57,7 @@ export interface Testimonial {
   result: string
   avatarSeed: string
 }
-
+ 
 export const testimonials: Testimonial[] = [
   {
     name: 'Camila R.',
@@ -91,14 +92,14 @@ export const testimonials: Testimonial[] = [
     avatarSeed: 'alina',
   },
 ]
-
+ 
 export const stats = [
   { label: 'Women guided through the Method', value: 12400, suffix: '+' },
   { label: 'Average saturation reduction', value: 58, suffix: '%' },
   { label: 'Report improved focus in week one', value: 91, suffix: '%' },
   { label: 'Would recommend to a friend', value: 97, suffix: '%' },
 ]
-
+ 
 export interface PricingTier {
   name: string
   price: string
@@ -107,59 +108,96 @@ export interface PricingTier {
   features: string[]
   highlighted?: boolean
   cta: string
+  group: 'planner' | 'starter' | 'deep'
 }
-
+ 
 export const pricingTiers: PricingTier[] = [
   {
-    name: 'Foundations',
-    price: '$47',
-    period: 'one-time',
-    description: 'Start your journey with the core awareness and detox practices.',
+    name: 'Planner Empresarias Saturadas',
+    price: '$8',
+    period: 'PDF descargable',
+    description: 'El planner que no te pide que hagas más. Te ayuda a ver qué sistema estás sosteniendo esta semana.',
     features: [
-      'Stage 1 & 2: Awareness + Detox',
-      'Mental Saturation Assessment report',
-      'Core toolkit (Brain Dump, Morning Reset)',
-      'Private community access',
+      'Plantilla semanal de energía (Energy Budget™)',
+      'Tracker de hábitos ancla (Anchor Habits™)',
+      'Checklist de los 10 Bloqueos Invisibles, para revisar cada semana',
+      'Prompts breves de reflexión (2-3 preguntas, no un diario largo)',
+      'PDF descargable e imprimible',
     ],
-    cta: 'Buy Now',
+    cta: 'Comprar el Planner',
+    group: 'planner',
   },
   {
-    name: 'The Full Method',
-    price: '$197',
-    period: 'one-time',
-    description: 'The complete five-stage MINDVANCCI transformation experience.',
+    name: 'Masterclass Mindvancci Reset™',
+    price: '$20',
+    period: '1 día · 4 horas con breaks',
+    description: 'Vas a salir de esta masterclass sabiendo exactamente cuáles de tus 10 Bloqueos Invisibles están activos ahora mismo, y por qué "hacer más" nunca los va a resolver.',
     features: [
-      'All 5 stages, fully guided',
-      'MINDVANCCI AI Coach access',
-      'Full tools suite unlocked',
-      'Weekly live group sessions',
-      'Lifetime updates',
+      'Masterclass en vivo de 4 horas (con breaks)',
+      'Recorrido completo de los 10 Bloqueos Invisibles',
+      'Overview del método en 5 fases (OBSERVE → EXPAND)',
+      'Q&A en vivo',
+      'Replay disponible 48-72h',
+    ],
+    cta: 'Reserva tu cupo',
+    group: 'starter',
+  },
+  {
+    name: 'Taller Intensivo de Rediseño',
+    price: '$47',
+    period: '2 días de Zoom',
+    description: 'En 2 sesiones no solo entiendes tu sistema — empiezas a reconstruirlo con las piezas que más rápido cambian cómo sostienes tu día: tus ciclos abiertos y tus decisiones.',
+    features: [
+      '2 sesiones en vivo por Zoom (90-120 min c/u)',
+      'Ejercicios en vivo, no solo teoría',
+      'Replay disponible 48-72h por sesión',
+    ],
+    cta: 'Únete al Taller',
+    group: 'starter',
+  },
+  {
+    name: 'Taller Intensivo de Rediseño — Semana Completa',
+    price: '$147',
+    period: '3 días de Zoom en 1 semana + kit de herramientas',
+    description: 'No solo rediseñas tu sistema en vivo — te vas con las herramientas para sostenerlo la semana siguiente, sin depender de motivación.',
+    features: [
+      '3 sesiones en vivo por Zoom, repartidas en 1 semana',
+      'Workbook descargable de los 10 Bloqueos Invisibles',
+      'Plantilla Energy Budget™ y tracker Anchor Habits™',
+      'Hoja de trabajo del Sistema de Decisiones Mindvancci™',
+      'Replay extendido: 7 días por sesión',
+      'Canal temporal de la cohorte para dudas entre sesiones',
+      'Sesión bonus de Q&A asincrónica al cierre de la semana',
     ],
     highlighted: true,
-    cta: 'Buy Now',
+    cta: 'Reserva la Semana Completa',
+    group: 'deep',
   },
   {
-    name: 'Executive 1:1',
-    price: '$890',
-    period: 'per month',
-    description: 'The Full Method plus private coaching for high-capacity leaders.',
+    name: 'Mindvancci 1:1',
+    price: '$499',
+    period: 'Todo el nivel de $147 + consulta privada',
+    description: 'Lo mismo que en el taller grupal, pero aplicado a tu caso específico, con alguien mirando tu sistema en particular — no un sistema promedio.',
     features: [
-      'Everything in The Full Method',
-      'Monthly 1:1 coaching sessions',
-      'Custom mental load audit',
-      'Direct message support',
+      'Todo lo del Taller Semana Completa (3 sesiones + kit de herramientas)',
+      'Sesión 1:1 de 60-90 min por Zoom, con el diagnóstico aplicado a tu negocio real',
+      'Energy Budget™ y Anchor Habits™ diseñados en vivo para tu semana, no en genérico',
+      'Plan de intervención priorizado a 30 días: qué bloqueo atacar primero',
+      'Documento-resumen en PDF con el plan acordado',
+      'Acceso prioritario por email/WhatsApp durante 2 semanas post-sesión',
     ],
-    cta: 'Buy Now',
+    cta: 'Aplica para el 1:1',
+    group: 'deep',
   },
 ]
-
+ 
 export interface DashboardDay {
   day: string
   saturation: number
   focus: number
   energy: number
 }
-
+ 
 export const weekData: DashboardDay[] = [
   { day: 'Mon', saturation: 68, focus: 42, energy: 40 },
   { day: 'Tue', saturation: 61, focus: 48, energy: 45 },
@@ -169,10 +207,11 @@ export const weekData: DashboardDay[] = [
   { day: 'Sat', saturation: 38, focus: 66, energy: 68 },
   { day: 'Sun', saturation: 33, focus: 71, energy: 74 },
 ]
-
+ 
 export const achievements = [
   { title: '7-Day Streak', description: 'Completed daily check-ins for a full week', icon: 'flame' },
   { title: 'Deep Breather', description: 'Finished 10 breathing exercises', icon: 'wind' },
   { title: 'Brain Dump Pro', description: 'Cleared 25 mental loops', icon: 'brain' },
   { title: 'Focus Finisher', description: 'Completed 5 deep focus sessions', icon: 'target' },
 ]
+ 
