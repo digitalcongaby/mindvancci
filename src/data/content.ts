@@ -1,4 +1,3 @@
-
 export interface MethodStage {
   stage: number
   title: string
@@ -108,6 +107,7 @@ export interface PricingTier {
   features: string[]
   highlighted?: boolean
   cta: string
+  url: string
   group: 'planner' | 'starter' | 'deep'
 }
  
@@ -125,6 +125,7 @@ export const pricingTiers: PricingTier[] = [
       'PDF descargable e imprimible',
     ],
     cta: 'Comprar el Planner',
+    url: 'https://pay.hotmart.com/H107240968B',
     group: 'planner',
   },
   {
@@ -140,6 +141,7 @@ export const pricingTiers: PricingTier[] = [
       'Replay disponible 48-72h',
     ],
     cta: 'Reserva tu cupo',
+    url: 'https://pay.hotmart.com/R107285782Q',
     group: 'starter',
   },
   {
@@ -153,6 +155,7 @@ export const pricingTiers: PricingTier[] = [
       'Replay disponible 48-72h por sesión',
     ],
     cta: 'Únete al Taller',
+    url: 'https://pay.hotmart.com/M107285891Y',
     group: 'starter',
   },
   {
@@ -171,6 +174,7 @@ export const pricingTiers: PricingTier[] = [
     ],
     highlighted: true,
     cta: 'Reserva la Semana Completa',
+    url: 'https://pay.hotmart.com/Y107285986E',
     group: 'deep',
   },
   {
@@ -187,6 +191,7 @@ export const pricingTiers: PricingTier[] = [
       'Acceso prioritario por email/WhatsApp durante 2 semanas post-sesión',
     ],
     cta: 'Aplica para el 1:1',
+    url: 'https://pay.hotmart.com/F107286029N',
     group: 'deep',
   },
 ]
@@ -214,4 +219,3 @@ export const achievements = [
   { title: 'Brain Dump Pro', description: 'Cleared 25 mental loops', icon: 'brain' },
   { title: 'Focus Finisher', description: 'Completed 5 deep focus sessions', icon: 'target' },
 ]
- 
