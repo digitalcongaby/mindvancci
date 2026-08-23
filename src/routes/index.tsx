@@ -3,7 +3,6 @@ import { Nav } from '@/components/Nav'
 import { Hero } from '@/components/Hero'
 import { MethodTimeline } from '@/components/MethodTimeline'
 import { DashboardDemo } from '@/components/DashboardDemo'
-import { AICoach } from '@/components/AICoach'
 import { ToolsGrid } from '@/components/ToolsGrid'
 import { SuccessStories } from '@/components/SuccessStories'
 import { CoursesPricing } from '@/components/CoursesPricing'
@@ -22,7 +21,6 @@ function Home() {
         <Hero />
         <MethodTimeline />
         <DashboardDemo />
-        <AICoach />
         <ToolsGrid />
         <SuccessStories />
         <CoursesPricing />
