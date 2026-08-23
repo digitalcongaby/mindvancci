@@ -2,9 +2,6 @@ import { Check } from 'lucide-react'
 import { pricingTiers, type PricingTier } from '@/data/content'
 import { Reveal } from './Reveal'
 
-// Replace with your real Systeme.io checkout/funnel URL(s) before launch.
-const SYSTEME_IO_URL = 'https://systeme.io/'
-
 function PricingCard({ tier, delay }: { tier: PricingTier; delay: number }) {
   return (
     <Reveal
@@ -41,7 +38,7 @@ function PricingCard({ tier, delay }: { tier: PricingTier; delay: number }) {
       </ul>
 
       <a
-        href={SYSTEME_IO_URL}
+        href={tier.url}
         target="_blank"
         rel="noopener noreferrer"
         className={`mt-8 inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-transform hover:scale-[1.02] ${
