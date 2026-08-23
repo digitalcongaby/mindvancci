@@ -4,12 +4,11 @@ import { Menu, X } from 'lucide-react'
 import { ThemeToggle } from './ThemeToggle'
 
 const links = [
-  { href: '/#method', label: 'The Method' },
+  { href: '/#method', label: 'El Método' },
   { href: '/#dashboard', label: 'Dashboard' },
-  { href: '/#ai-coach', label: 'AI Coach' },
-  { href: '/#tools', label: 'Tools' },
-  { href: '/#stories', label: 'Stories' },
-  { href: '/#courses', label: 'Courses' },
+  { href: '/#tools', label: 'Herramientas' },
+  { href: '/#stories', label: 'Resultados' },
+  { href: '/#courses', label: 'Programas' },
 ]
 
 export function Nav() {
@@ -40,7 +39,7 @@ export function Nav() {
             to="/assessment"
             className="hidden rounded-full bg-mv-plum px-4 py-2 text-sm font-medium text-white transition-transform hover:scale-[1.03] dark:bg-white dark:text-mv-plum-deep md:inline-block"
           >
-            Take the Assessment
+            Haz tu Diagnóstico
           </Link>
           <button
             type="button"
@@ -70,7 +69,7 @@ export function Nav() {
             onClick={() => setOpen(false)}
             className="mt-1 rounded-lg bg-mv-plum px-3 py-2 text-center text-sm font-medium text-white"
           >
-            Take the Assessment
+            Haz tu Diagnóstico
           </Link>
         </div>
       )}
